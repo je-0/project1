@@ -5,7 +5,7 @@ window.addEventListener("load",function(){
 	// request.responseType="json"
 	// request.send();
 	// request.addEventListener("load",function(){
-		var imgpath=request.response;
+		// var imgpath=request.response;
 		var keyMoving=document.getElementsByClassName("key_moving")[0]
 		var appendHTML="";
 
