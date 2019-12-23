@@ -1,10 +1,10 @@
 window.addEventListener("load",function(){
-	var url="/imgpath.json"
-	var request= new XMLHttpRequest()
-	request.open("GET",url);
-	request.responseType="json"
-	request.send();
-	request.addEventListener("load",function(){
+	// var url="/imgpath.json"
+	// var request= new XMLHttpRequest()
+	// request.open("GET",url);
+	// request.responseType="json"
+	// request.send();
+	// request.addEventListener("load",function(){
 		var imgpath=request.response;
 		var keyMoving=document.getElementsByClassName("key_moving")[0]
 		var appendHTML="";
@@ -13,7 +13,7 @@ window.addEventListener("load",function(){
 		for(key1 in imgpath){
 			appendHTML+='<li>\n'
 			// console.log(key1+" : "+imgpath[key1]);// key1 : Object
-			for(key2 in imgpath[key1]){ // 여기서 중요한게 그러니까 투뎁스 안에서 오브젝트 2개를 활용하는것!
+			for(key2 in imgpath[key1]){
 				appendHTML+='<a href="" class="'+key2+'"><img src="images/'+imgpath[key1][key2]+'" alt="key1"></a>\n'
 				// console.log(key2+" : "+imgpath[key1][key2]);
 			}
@@ -120,7 +120,7 @@ window.addEventListener("load",function(){
 				});
 			}
 		}
-	})//request close
+	// })//request close
 }) //load close
 // window.addEventListener("load",function(){
 //
