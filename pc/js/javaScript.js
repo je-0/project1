@@ -7,21 +7,21 @@ window.addEventListener("load",function(){
 	// request.addEventListener("load",function(){
 		// var imgpath=request.response;
 		var keyMoving=document.getElementsByClassName("key_moving")[0]
-		var appendHTML="";
-
-		appendHTML+='<ul>\n'
-		for(key1 in imgpath){
-			appendHTML+='<li>\n'
-			// console.log(key1+" : "+imgpath[key1]);// key1 : Object
-			for(key2 in imgpath[key1]){
-				appendHTML+='<a href="" class="'+key2+'"><img src="images/'+imgpath[key1][key2]+'" alt="key1"></a>\n'
-				// console.log(key2+" : "+imgpath[key1][key2]);
-			}
-			appendHTML+='</li>\n'
-		}
-		appendHTML+='</ul>'
-		console.log(appendHTML);
-		keyMoving.innerHTML=appendHTML
+		// var appendHTML="";
+		//
+		// appendHTML+='<ul>\n'
+		// for(key1 in imgpath){
+		// 	appendHTML+='<li>\n'
+		// 	// console.log(key1+" : "+imgpath[key1]);// key1 : Object
+		// 	for(key2 in imgpath[key1]){
+		// 		appendHTML+='<a href="" class="'+key2+'"><img src="images/'+imgpath[key1][key2]+'" alt="key1"></a>\n'
+		// 		// console.log(key2+" : "+imgpath[key1][key2]);
+		// 	}
+		// 	appendHTML+='</li>\n'
+		// }
+		// appendHTML+='</ul>'
+		// console.log(appendHTML);
+		// keyMoving.innerHTML=appendHTML
 		var keyvisual=document.getElementsByClassName("keyvisual")[0]
 		var n = 0;
 		var t;
