@@ -1,0 +1,31 @@
+{
+	"NEW" : {
+			"sub1" : "ARRIVED",
+			"sub2" : "NEW"
+	},
+	"WOMEN" : {
+			"sub1" : "APPAREL",
+			"sub2" : "SHOES",
+			"sub3" : "BAGS",
+			"sub4" : "ACCESSORIES"
+	},
+	"MEN" : {
+			"sub1" : "APPAREL",
+			"sub2" : "SHOES",
+			"sub3" : "BAG & ACC"
+	},
+	"LIFE" : {
+		"sub1" : "APPAREL",
+		"sub2" : "SHOES",
+		"sub3" : "BAGS",
+		"sub4" : "ACCESSORIES"
+	},
+	"SALE" : {
+		"sub1" : "SALE",
+		"sub2" : "SALE EVENT"
+	},
+	"BRAND" : {
+		"sub1" : "EXCLUSIVE",
+		"sub2" : "TOP"
+	}
+}
