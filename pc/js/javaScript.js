@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-	var url="/imgpath.json"
+	var url="/project1/pc/imgpath.json"
 	var request= new XMLHttpRequest()
 	request.open("GET",url);
 	request.responseType="json"
