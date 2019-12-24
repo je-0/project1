@@ -20,7 +20,7 @@ window.addEventListener("load",function(){
 			appendHTML+='</li>\n'
 		}
 		appendHTML+='</ul>'
-		console.log(appendHTML);
+		// console.log(appendHTML);
 		keyMoving.innerHTML=appendHTML
 		var keyvisual=document.getElementsByClassName("keyvisual")[0]
 		var n = 0;
@@ -69,7 +69,30 @@ window.addEventListener("load",function(){
 				}
 			}
 		}
+	})//request close
 
+	var url2="/project1/pc//menupath.json"
+	var request2= new XMLHttpRequest()
+	request2.open("GET",url2);
+	request2.responseType="json"
+	request2.send();
+	request2.addEventListener("load",function(){
+		var menupath=request2.response;
+		var nav=document.getElementById("nav")
+		var appendHTML="";
+		appendHTML+='<ul>\n'
+		for(key1 in menupath){
+			appendHTML+='<li>\n'
+			appendHTML+='<a href="">'+key1+'</a>\n'
+			appendHTML+='<ul class="sub">\n'
+			for(key2 in menupath[key1]){
+				appendHTML+='<li><a href="">'+menupath[key1][key2]+'</a></li>\n'
+			}
+			appendHTML+='</ul>\n'
+			appendHTML+='</li>\n'
+		}
+		appendHTML+='</ul>'
+		nav.innerHTML=appendHTML
 		var nav =document.getElementById("nav");
 		var navul =nav.children[0];
 		var depth1 =navul.children; // nav > ul > li
@@ -94,11 +117,8 @@ window.addEventListener("load",function(){
 			});
 
 			for(var j=0; j<depth1li.children[1].children.length; j++){
-				// console.log(depth1li.children[1].children.length);
 				if(j == (depth1li.children[1].children.length-1)){ // nav > ul > li > ul > li:last-child
-					// console.log(depth1li.children[1].children[j]);
 					depth1li.children[1].children[j].addEventListener("focusout", function(e){
-						// console.log(e.currentTarget.parentElement.previousElementSibling);
 						e.currentTarget.parentElement.previousElementSibling.classList.remove("over");
 					});
 				}
@@ -120,16 +140,5 @@ window.addEventListener("load",function(){
 				});
 			}
 		}
-	})//request close
+	})//request2 close
 }) //load close
-// window.addEventListener("load",function(){
-//
-// 	//popup
-// 		// var popup=document.getElementsByClassName("popup")[0]
-// 		// popupA=popup.children[1].children[1].children[0];
-// 		// popupA.addEventListener("click",function(e){
-// 		// 	e.preventDefault()
-// 		// 	popup.classList.add("close")
-// 		// })
-//
-// })
