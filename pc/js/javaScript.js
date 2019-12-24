@@ -71,7 +71,7 @@ window.addEventListener("load",function(){
 		}
 	})//request close
 
-	var url2="/project1/pc//menupath.json"
+	var url2="/project1/pc/menupath.json"
 	var request2= new XMLHttpRequest()
 	request2.open("GET",url2);
 	request2.responseType="json"
@@ -141,4 +141,5 @@ window.addEventListener("load",function(){
 			}
 		}
 	})//request2 close
+
 }) //load close
